@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous" />
-   <script src="https://kit.fontawesome.com/6ff971e226.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous" />
+   <script src="://kit.fontawesome.com/6ff971e226.js" crossorigin="anonymous"></script>
    <style>
-   @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+   @import url("://fonts.googleapis.com/css2?family=Montserrat&display=swap");
    </style>
-   <meta name="description" content="Weather application" />
-   <link rel="stylesheet" href="./assets/style.css" />
+   <meta name="description" content="Weather application made for UCB's bootcamp with Open Weather API." />
+   <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <link rel="shortcut icon" href="./assets/images/wind.png">
+  <link rel="shortcut icon" href="./assets/wind.png">
    <title>Open Weather API Application </title>
 </head>
-
 <body>
    <div class="wrapper">
       <!--Nav Header-->
@@ -43,7 +41,8 @@
             <!--Central Content Area-->
             <!--Today's Weather-->
             
-            <div class="col-sm-9" id="weather-today" style="text-align:center;margin-left:20%"><br><br>
+            <div class="col-sm-9" id="weather-today" style="text-align:center;margin-left:20%">
+               <br><br>
                <h3 style="margin-right:30%">Today's Weather</h3>
                <div class="row">
                   <div class="col-sm-9">
@@ -60,64 +59,6 @@
                </div>
                <!--End Today's Weather Section-->
                <!--Forecast 5 Day Section-->
-               <div class="container" id="forecast5day" style="text-align:center;margin-left:1%"><br><br>
-                  <h3 style="margin-right:30%">5-Day Forecast</h3>
-                  <div class="row">
-                     <!--Day 1-->
-                     <div class="col-sm-2">
-                        <div class="card card5day">
-                           <h6 id="day1"></h6>
-                           <img id="i1" src="" style="margin-left:20%">
-                           <p><strong>Temp:</strong> <span id="t1"></span> °F</p>
-                           <p><strong>Humidity:</strong> <span id="h1"></span>%</p>
-                        </div>
-                     </div>
-                     <!--Day 2-->
-                     <div class="col-sm-2">
-                        <div class="card card5day">
-                           <h6 id="day2"></h6>
-                           <img id="i2" src="" style="margin-left:20%">
-                           <p><strong>Temp:</strong> <span id="t2"></span> °F</p>
-                           <p><strong>Humidity:</strong> <span id="h2"></span>%</p>
-                        </div>
-                     </div>
-                     <!--Day 3-->
-                     <div class="col-sm-2">
-                        <div class="card card5day">
-                           <h6 id="day3"></h6>
-                           <img id="i3" src="" style="margin-left:20%">
-                           <p><strong>Temp:</strong> <span id="t3"></span> °F</p>
-                           <p><strong>Humidity:</strong> <span id="h3"></span>%</p>
-                        </div>
-                     </div>
-                     <!--Day 4-->
-                     <div class="col-sm-2">
-                        <div class="card card5day">
-                           <h6 id="day4"></h6>
-                           <img id="i4" src="" style="margin-left:20%">
-                           <p><strong>Temp: </strong><span id="t4"></span> °F</p>
-                           <p><strong>Humidity:</strong> <span id="h4"></span>%</p>
-                        </div>
-                     </div>
-                     <!--Day 5-->
-                     <div class="col-sm-2">
-                        <div class="card card5day">
-                           <h6 id="day5"></h6>
-                           <img id="i5" src="" style="margin-left:20%">
-                           <p><strong>Temp:</strong> <span id="t5"></span> °F</p>
-                           <p><strong>Humidity:</strong> <span id="h5"></span>%</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!--End 5 day Container -->
-            </div>
-            <!--End Center Container -->
-         </div>
-         <!--Scripts: Moment, jQuery, JS-->
-         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-         <script src="./assets/script.js"></script>
+               <div class="container" id="forecast5day" style="text-align:center;margin-left:1%">
 </body>
-
 </html>
