@@ -112,3 +112,22 @@ let addList = () => {
     })
   }
 };
+
+// TODAY WEATHER
+// Content for central weather feature
+todayDate.textContent = moment()
+  .format("dddd, MMMM Do, h:mm a");
+
+// getWeather (API Call) => showWeather
+let showWeather = (weather, searchQuery) => {
+  cityEl.textContent = searchQuery;
+  iconEl = weather.weather[0].icon;
+  document.getElementById("todayIcon")
+    .src = "./assets/css/icons/" + iconEl + ".png"; // changeout icon set in future, here and forecast
+  document.getElementById("todayTemp")
+    .innerHTML = weather.main.temp;
+  document.getElementById("todayHumidity")
+    .innerHTML = weather.main.humidity;
+  document.getElementById("todayWind")
+    .innerHTML = weather.wind.speed;
+};
