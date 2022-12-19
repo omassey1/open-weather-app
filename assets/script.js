@@ -153,3 +153,51 @@ document.getElementById("day5")
   .innerHTML = moment()
   .add(5, "d")
   .format("MMMM Do");
+
+  // getForecast (API Call) => showForecast
+// t = temperature, h = humidity, i = icon,+ # = day in 5 day forecast
+
+let showForecast = (forecast, searchQuery) => {
+  cityEl.textContent = searchQuery;
+  // 1 of 5
+  document.getElementById("t1")
+    .innerHTML = forecast.list[4].main.temp;
+  document.getElementById("h1")
+    .innerHTML = forecast.list[4].main.humidity;
+  iconEl1 = forecast.list[4].weather[0].icon;
+  document.getElementById("i1")
+    .src = "./assets/css/icons/" + iconEl1 + ".png";
+  // 2 of 5
+  document.getElementById("t2")
+    .innerHTML = forecast.list[12].main.temp;
+  document.getElementById("h2")
+    .innerHTML = forecast.list[12].main.humidity;
+  iconEl2 = forecast.list[12].weather[0].icon;
+  document.getElementById("i2")
+    .src = "./assets/css/icons/"  + iconEl2 + ".png";
+  // 3 of 5
+  document.getElementById("t3")
+    .innerHTML = forecast.list[20].main.temp;
+  document.getElementById("h3")
+    .innerHTML = forecast.list[20].main.humidity;
+  iconEl3 = forecast.list[20].weather[0].icon;
+  document.getElementById("i3")
+    .src = "./assets/css/icons/" + iconEl3 + ".png";
+  // 4 of 5
+  document.getElementById("t4")
+    .innerHTML = forecast.list[28].main.temp;
+  document.getElementById("h4")
+    .innerHTML = forecast.list[28].main.humidity;
+  iconEl4 = forecast.list[28].weather[0].icon;
+  document.getElementById("i4") 
+    .src = "./assets/css/icons/" + iconEl4 + ".png";
+  // 5 of 5
+  document.getElementById("t5")
+    .innerHTML = forecast.list[36].main.temp;
+  document.getElementById("h5")
+    .innerHTML = forecast.list[36].main.humidity;
+  iconEl5 = forecast.list[36].weather[0].icon;
+  document.getElementById("i5")
+    .src = "./assets/css/icons/" + iconEl5 + ".png";
+  // end 5 day Forecast
+};
