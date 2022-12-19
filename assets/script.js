@@ -131,3 +131,25 @@ let showWeather = (weather, searchQuery) => {
   document.getElementById("todayWind")
     .innerHTML = weather.wind.speed;
 };
+
+// 5 DAY FORECAST
+document.getElementById("day1")
+  .innerHTML = moment()
+  .add(1, "d")
+  .format("MMMM Do");
+document.getElementById("day2")
+  .innerHTML = moment()
+  .add(2, "d")
+  .format("MMMM Do");
+document.getElementById("day3")
+  .innerHTML = moment()
+  .add(3, "d")
+  .format("MMMM Do");
+document.getElementById("day4")
+  .innerHTML = moment()
+  .add(4, "d")
+  .format("MMMM Do");
+document.getElementById("day5")
+  .innerHTML = moment()
+  .add(5, "d")
+  .format("MMMM Do");
