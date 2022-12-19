@@ -85,3 +85,30 @@ let submitQuery = (event) => {
     alert("Enter a city name to get the weather!");
   }
 };
+
+// PAST CITY SEARCHES
+let listCity = () => {
+  citiesList = JSON.parse(localStorage.getItem("citiesList"));
+  if(!citiesList) {
+    citiesList = [];
+  };
+};
+
+// ADD BUTTONS TO SEARCH HISTORY
+let addList = () => {
+  for(var i = 0; i < citiesList.length; i++) {
+    let btn = document.createElement("button");
+    btn.className = "searched-list btn"; // one for identifying as list item, one for styling
+    btn.innerHTML = citiesList[i];
+    buttons.appendChild(btn); // maybe add a clear buttons option in future
+  };
+
+  // USE PAST SEARCH BUTTON
+  let listButtons = document.querySelectorAll(".searched-list");
+  for(var i = 0; i < listButtons.length; i++) {
+    listButtons[i].addEventListener("click", (event) => {
+      getWeather(event.target.textContent);
+      getForecast(event.target.textContent);
+    })
+  }
+};
