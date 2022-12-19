@@ -108,3 +108,44 @@ h6 {
 h5, h6 {
   font-weight: 900;
 }
+
+.display-4 {
+  color: white;
+  
+  font-size: 50px;
+  font-weight: 600;
+  padding-top: 10px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/*UV INDEX COLORS */
+.severeLevel {
+  padding: 4px;
+  background-color: rgb(175, 30, 14);
+  color: white;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.moderateLevel {
+  padding: 4px;
+  background-color: goldenrod;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.favorableLevel {
+  padding: 4px;
+  background-color: rgb(21, 147, 21);
+  color: white;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.container {
+  width: 90vw;
+}
+#formCity {
+  max-width: fit-content;
+}
