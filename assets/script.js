@@ -61,3 +61,27 @@ let getForecast = (city) => {
         });
     });
 };
+
+// SUBMIT CITY SEARCH AND STORE CITY SEARCH
+
+// submitQuery => listCity, getWeather, getForecast
+let submitQuery = (event) => {
+  event.preventDefault();
+  let cityEl = cityInput.value.trim();
+  let btn = document.createElement("button"); // need to add in no blank button without this breaking
+  btn.className = "searched-list btn";
+  btn.innerHTML = cityEl; // need to add in no dupe button needed, maybe capitalization standardization
+  buttons.appendChild(btn);
+  listCity();
+  if(!citiesList.includes(cityEl) && (cityEl != "")) {
+    citiesList.push(cityEl);
+  };
+  localStorage.setItem("citiesList", JSON.stringify(citiesList));
+  if(cityEl) {
+    getWeather(cityEl);
+    getForecast(cityEl);
+    cityInput.value = "";
+  } else {
+    alert("Enter a city name to get the weather!");
+  }
+};
