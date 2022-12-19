@@ -201,3 +201,13 @@ let showForecast = (forecast, searchQuery) => {
     .src = "./assets/css/icons/" + iconEl5 + ".png";
   // end 5 day Forecast
 };
+
+// LISTEN FOR CITY FORM SUBMISSION
+// listen => submitQuery
+cityForm.addEventListener("submit", submitQuery);
+listCity();
+addList();
+
+// OPEN WITH DEFAULT VALUES
+getWeather("Charlotte");
+getForecast("Charlotte");
