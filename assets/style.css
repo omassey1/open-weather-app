@@ -73,3 +73,38 @@ h3 {
 .container {
   width: 90vw;
 }
+
+#formCity {
+  max-width: fit-content;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.card-search {
+  min-width: fit-content;
+  margin-left:10%;
+  width:100%;
+}
+
+.card5day {
+  height: fit-content;
+  font-size: .25rem;
+  margin-top: .2vh;
+  margin-left : 5%;
+}
+
+body {
+  background-color: skyblue;
+  height: 100vh;
+}
+
+p,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+}
+
+h5, h6 {
+  font-weight: 900;
+}
